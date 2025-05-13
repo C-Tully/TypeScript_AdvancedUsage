@@ -15,3 +15,14 @@ let store: DataStore = {};
 //it is limited to what we set as acceptable.
 store.id = 5;
 store.isOpen = false;
+
+
+
+// Constant Types
+// "as const" is a TS feature
+// tells TS to be narrow when applying a type.
+// note "readonly" now.
+ let roles = ['admin','guest','editor'] as const;
+
+ //return is 'admin'
+ const firstRole = roles[0];
