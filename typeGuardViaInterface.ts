@@ -1,30 +1,30 @@
-//Typeguards Via Interface TODO
-//instanceof is another way to determine
-//which class we're using.
+// //Typeguards Via Interface TODO
+// //instanceof is another way to determine
+// //which class we're using.
 
-class User {
-  constructor(public name: string) {}
+// class User {
+//   constructor(public name: string) {}
 
-  join() {}
-}
+//   join() {}
+// }
 
-class Admin {
-  constructor(permissions: string[]) {}
+// class Admin {
+//   constructor(permissions: string[]) {}
 
-  scan() {}
-}
+//   scan() {}
+// }
 
-const user = new User("Chris");
-const admin = new Admin(["ban", "restore"]);
+// const user = new User("Chris");
+// const admin = new Admin(["ban", "restore"]);
 
-type Entity = User | Admin;
+// type Entity = User | Admin;
 
-function init(entity: Entity) {
-  // .join() OR .scan()
-  if (entity instanceof User) {
-    entity.join();
-    return;
-  }
-  //by using the return we can then use the other class
-  entity.scan();
-}
+// function init(entity: Entity) {
+//   // .join() OR .scan()
+//   if (entity instanceof User) {
+//     entity.join();
+//     return;
+//   }
+//   //by using the return we can then use the other class
+//   entity.scan();
+// }
