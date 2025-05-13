@@ -1,59 +1,59 @@
-type FileSource = {
-    type: 'file',
-    path: string;
-};
+// type FileSource = {
+//     type: 'file',
+//     path: string;
+// };
 
-const fileSource: FileSource = {
-    type:'file',
-    path: "some/path/to/file.csv",
-};
+// const fileSource: FileSource = {
+//     type:'file',
+//     path: "some/path/to/file.csv",
+// };
 
-type DBSource = { type:'db', connectionUrl: string };
+// type DBSource = { type:'db', connectionUrl: string };
 
-const dbSource: DBSource = {
-    type:'db',
-  connectionUrl: "some-connection-url",
-};
+// const dbSource: DBSource = {
+//     type:'db',
+//   connectionUrl: "some-connection-url",
+// };
 
-type Source = FileSource | DBSource;
+// type Source = FileSource | DBSource;
 
-//Note the return type is a predicate
-// this is a prefered type guard for TS. 
-// Similar to how I was already doing it...
-function isFile(source: Source) {
-    return source.type === 'file';
-}
+// //Note the return type is a predicate
+// // this is a prefered type guard for TS. 
+// // Similar to how I was already doing it...
+// function isFile(source: Source) {
+//     return source.type === 'file';
+// }
 
-function loadData(source: Source) {
+// function loadData(source: Source) {
 
-  if (source.type === 'file') {
-    return;
-  }
-}
+//   if (source.type === 'file') {
+//     return;
+//   }
+// }
 
-class User {
-    constructor(public name: string) { }
+// class User {
+//     constructor(public name: string) { }
 
-    join() { }
-}
+//     join() { }
+// }
 
-class Admin {
-    constructor(permissions: string[]) { }
+// class Admin {
+//     constructor(permissions: string[]) { }
 
-    scan() { }
-}
+//     scan() { }
+// }
 
-const user = new User("Chris");
-const admin = new Admin(["ban", "restore"]);
+// const user = new User("Chris");
+// const admin = new Admin(["ban", "restore"]);
 
-type Entity = User | Admin;
+// type Entity = User | Admin;
 
-function init(entity: Entity) {    
-    if (entity instanceof User) {
-        entity.join();
-        return;
-    }
+// function init(entity: Entity) {    
+//     if (entity instanceof User) {
+//         entity.join();
+//         return;
+//     }
     
-    entity.scan();
-}
+//     entity.scan();
+// }
   
